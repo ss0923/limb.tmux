@@ -1,0 +1,65 @@
+name: Bug report
+description: A defect in the tmux plugin's behavior
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search [existing issues](https://github.com/ss0923/limb.tmux/issues?q=is%3Aissue) before filing.
+
+  - type: input
+    id: tmux-version
+    attributes:
+      label: tmux version
+      description: Output of `tmux -V`.
+      placeholder: tmux 3.6a
+    validations:
+      required: true
+
+  - type: input
+    id: limb-version
+    attributes:
+      label: Limb binary version
+      description: Output of `limb --version`.
+      placeholder: limb 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-commit
+    attributes:
+      label: Plugin commit
+      description: Short SHA of limb.tmux currently installed.
+      placeholder: abc1234
+    validations:
+      required: true
+
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system
+      placeholder: macOS 15.0 / Ubuntu 24.04
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Minimal tmux.conf snippet and exact key sequence to reproduce.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
