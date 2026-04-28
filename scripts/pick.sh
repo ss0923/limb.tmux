@@ -7,7 +7,12 @@ if ! command -v limb >/dev/null 2>&1; then
     exit 1
 fi
 
-path="$(limb pick)" || exit 0
+fetch_flag=""
+if [[ "$(tmux show-option -gqv '@limb-pick-fetch')" == "on" ]]; then
+    fetch_flag="--fetch"
+fi
+
+path="$(limb pick $fetch_flag)" || exit 0
 [[ -z "$path" ]] && exit 0
 
 target="$(cd "$path" && pwd -P)"

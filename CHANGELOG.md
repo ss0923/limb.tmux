@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0](https://github.com/ss0923/limb.tmux/releases/tag/v0.2.0) - 2026-04-28
+
+### Added
+
+- `@limb-pick-fetch` tmux option. Set to `on` to pass `--fetch` to
+  `limb pick`, refreshing every repo's remote-tracking refs before the
+  popup opens. Aligns with limb 0.2.0's new flag.
+- README documents the in-picker `r` / `R` refresh keys and the
+  `FETCHED` column shipped in limb 0.2.0.
+
 ## [0.1.0](https://github.com/ss0923/limb.tmux/releases/tag/v0.1.0) - 2026-04-22
 
 Initial release.
